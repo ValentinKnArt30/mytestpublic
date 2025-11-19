@@ -1,44 +1,88 @@
+/* ---------- Общий фон ---------- */
 body {
-  background: linear-gradient(135deg, #000000, #af002d);
-  color: white;
-  font-family: "Segoe UI", sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1f4037, #99f2c8);
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
+@keyframes gradientAnimation {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ---------- Заголовки ---------- */
 h1, h2, h3 {
-  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
+/* ---------- Фото ---------- */
+.profile-photo {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin: 20px 0;
+  width: 220px;
+  height: auto;
+}
+
+/* ---------- Карточки ---------- */
 .card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px auto;
-  max-width: 600px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.5);
+  padding: 25px;
+  border-radius: 20px;
+  margin: 25px auto;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-img {
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
+/* ---------- Навыки ---------- */
 .skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 10px;
 }
 
 .skill {
-  background: rgba(255,255,255,0.2);
-  padding: 5px 12px;
-  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 14px;
+  border-radius: 12px;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ---------- Пример кода как терминал ---------- */
+.code-card {
+  background: rgba(0,0,0,0.8);
+  text-align: left;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #33ff33;
+  position: relative;
+}
+
+.code-card pre {
+  margin: 0;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.code-card::before {
+  content: "Terminal";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.7;
 }
