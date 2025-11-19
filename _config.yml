@@ -1,7 +1,0 @@
-title: "Валентин — QA тестировщик"
-email: "твой-email@example.com"
-description: "Портфолио начинающего QA-тестировщика"
-baseurl: "" # если репо GitHub Pages находится в корне
-url: "https://valentinknart30.github.io" 
-theme: jekyll-theme-architect
-markdown: kramdown
