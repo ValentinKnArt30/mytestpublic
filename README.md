@@ -11,8 +11,8 @@
 - Цель: стать сильным инженером
 
 ## ⚡ Навыки
-- JavaScript, Python
-- Git, GitHub, Docker, VS Code, HTML/CSS, Markdown, VDS
+- Учу языки: JavaScript, Python
+- Изучаю: Git, GitHub, Docker, VS Code, HTML/CSS, Markdown, VDS
 
 ## 💼 Пример кода
 ```python
