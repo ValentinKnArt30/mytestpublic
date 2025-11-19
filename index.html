@@ -1,140 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Валентин — Портфолио</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <!-- Hero секция -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Привет! 👋 Я — Валентин</h1>
-      <p>QA‑тестировщик & разработчик</p>
-      <a href="#about" class="btn">Узнать обо мне</a>
-    </div>
-  </header>
 
-  <!-- Обо мне -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="about-photo">
-        <img src="myfoto.jpg" alt="Моё фото" />
-      </div>
-      <div class="about-text">
-        <h2>Обо мне</h2>
-        <p>🎓 Учусь: QAMID126 — Тестирование ПО</p>
-        <p>💻 Интересы: Frontend, Backend, AI, Gamedev, DevOps и многое другое</p>
-        <p>🚀 Цель: стать уверенным инженером и создавать качественные продукты</p>
-      </div>
-    </div>
-  </section>
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Привет! 👋 Я — Валентин</h1>
+    <p>Начинающий QA-тестировщик</p>
+    <a href="#about" class="btn">Узнать обо мне</a>
+  </div>
+</header>
 
-  <!-- Навыки -->
-  <section id="skills" class="section skills">
-    <div class="container">
-      <h2>Навыки</h2>
-      <div class="skills-grid">
-        <div class="skill">JavaScript</div>
-        <div class="skill">Python</div>
-        <div class="skill">Git</div>
-        <div class="skill">Docker</div>
-        <div class="skill">VS Code</div>
-        <div class="skill">HTML / CSS</div>
-        <div class="skill">Markdown</div>
-        <div class="skill">VDS</div>
-      </div>
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about-photo">
+      <img src="myfoto.jpg" alt="Моё фото">
     </div>
-  </section>
+    <div class="about-text">
+      <h2>Обо мне</h2>
+      <p>🎓 Учусь: QAMID126 — Тестирование ПО</p>
+      <p>💻 Интересы: Frontend, Backend, AI, Gamedev, DevOps</p>
+      <p>🚀 Цель: стать сильным инженером и создавать качественные продукты</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Пример кода -->
-  <section id="code" class="section code">
-    <div class="container">
-      <h2>Пример кода</h2>
-      <pre><code>def greet(name: str) -> str:
+<section id="skills" class="section skills">
+  <div class="container">
+    <h2>Навыки</h2>
+    <div class="skills-grid">
+      <div class="skill">Учу JavaScript</div>
+      <div class="skill">В планах развить знания Python</div>
+      <div class="skill">Git</div>
+      <div class="skill">Хочу изучить Docker</div>
+      <div class="skill">VS Code</div>
+      <div class="skill">HTML / CSS</div>
+      <div class="skill">Markdown</div>
+      <div class="skill">VDS</div>
+    </div>
+  </div>
+</section>
+
+<section id="code" class="section code">
+  <div class="container">
+    <h2>Пример кода</h2>
+    <div class="terminal">
+      <pre id="code-text"></pre>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Валентин. Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+const code = `def greet(name: str) -> str:
     return f"Привет, {name}!"
 
-print(greet("мир"))</code></pre>
-    </div>
-  </section>
+print(greet("мир"))`;
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Валентин. Все права защищены.</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Валентин — Портфолио</title>
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body>
-  <!-- Hero секция -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Привет! 👋 Я — Валентин</h1>
-      <p>QA‑тестировщик & разработчик</p>
-      <a href="#about" class="btn">Узнать обо мне</a>
-    </div>
-  </header>
+const el = document.getElementById('code-text');
+let i = 0;
 
-  <!-- Обо мне -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="about-photo">
-        <img src="myfoto.jpg" alt="Моё фото" />
-      </div>
-      <div class="about-text">
-        <h2>Обо мне</h2>
-        <p>🎓 Учусь: QAMID126 — Тестирование ПО</p>
-        <p>💻 Интересы: Frontend, Backend, AI, Gamedev, DevOps и многое другое</p>
-        <p>🚀 Цель: стать уверенным инженером и создавать качественные продукты</p>
-      </div>
-    </div>
-  </section>
+function typeWriter() {
+  if (i < code.length) {
+    el.textContent += code.charAt(i);
+    i++;
+    setTimeout(typeWriter, 60); // скорость набора текста
+  }
+}
+typeWriter();
+</script>
 
-  <!-- Навыки -->
-  <section id="skills" class="section skills">
-    <div class="container">
-      <h2>Навыки</h2>
-      <div class="skills-grid">
-        <div class="skill">JavaScript</div>
-        <div class="skill">Python</div>
-        <div class="skill">Git</div>
-        <div class="skill">Docker</div>
-        <div class="skill">VS Code</div>
-        <div class="skill">HTML / CSS</div>
-        <div class="skill">Markdown</div>
-        <div class="skill">VDS</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Пример кода -->
-  <section id="code" class="section code">
-    <div class="container">
-      <h2>Пример кода</h2>
-      <pre><code>def greet(name: str) -> str:
-    return f"Привет, {name}!"
-
-print(greet("мир"))</code></pre>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Валентин. Все права защищены.</p>
-    </div>
-  </footer>
 </body>
 </html>

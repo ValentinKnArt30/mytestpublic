@@ -3,19 +3,25 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
-  color: #333;
+  color: #fff;
   line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* ---------- Hero секция ---------- */
 .hero {
   position: relative;
   height: 80vh;
-  background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  text-align: center;
+  background: url('assets/hero-bg.jpg') center/cover no-repeat; /* общий фон hero-bg */
 }
 
 .hero-overlay {
@@ -27,7 +33,6 @@ body, html {
 
 .hero-content {
   position: relative;
-  text-align: center;
   z-index: 2;
 }
 
@@ -56,36 +61,26 @@ body, html {
   background: #ff2143;
 }
 
-/* ---------- Секции ---------- */
-.section {
-  padding: 60px 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* About секция */
+/* ---------- Обо мне ---------- */
 .about {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   align-items: center;
+  padding: 60px 0;
 }
 
 .about-photo img {
   width: 250px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .about-text h2 {
   margin-bottom: 1rem;
 }
 
-/* Навыки */
+/* ---------- Навыки ---------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -94,25 +89,35 @@ body, html {
 }
 
 .skill {
-  padding: 10px 15px;
-  background: #f4f4f4;
-  border-radius: 8px;
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
   text-align: center;
-  font-weight: 600;
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+  transition: all 0.3s;
 }
 
-/* Пример кода */
-.code pre {
-  background: #1e1e1e;
-  color: #33ff33;
-  padding: 20px;
+.skill:hover {
+  box-shadow: 0 0 20px #ff416c, 0 0 30px #ff2143;
+  transform: translateY(-5px);
+  border-color: #ff416c;
+}
+
+/* ---------- Пример кода / терминал ---------- */
+.terminal {
+  background: #111;
   border-radius: 8px;
-  overflow-x: auto;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   font-family: "Fira Code", monospace;
-  font-size: 1rem;
+  color: #33ff33;
+  min-height: 150px;
+  overflow-x: auto;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 .footer {
   background: #222;
   color: #aaa;
