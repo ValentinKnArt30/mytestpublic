@@ -1,88 +1,121 @@
-/* ---------- Общий фон ---------- */
-body {
+/* ---------- Общие стили ---------- */
+body, html {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
-  color: #fff;
-  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1f4037, #99f2c8);
-  background-size: 800% 800%;
-  animation: gradientAnimation 15s ease infinite;
+  color: #333;
+  line-height: 1.6;
 }
 
-@keyframes gradientAnimation {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
+/* ---------- Hero секция ---------- */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff416c;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff2143;
+}
+
+/* ---------- Секции ---------- */
+.section {
+  padding: 60px 0;
 }
 
 .container {
-  text-align: center;
-  padding: 40px 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* ---------- Заголовки ---------- */
-h1, h2, h3 {
-  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-
-/* ---------- Фото ---------- */
-.profile-photo {
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin: 20px 0;
-  width: 220px;
-  height: auto;
-}
-
-/* ---------- Карточки ---------- */
-.card {
-  background: rgba(0,0,0,0.5);
-  padding: 25px;
-  border-radius: 20px;
-  margin: 25px auto;
-  max-width: 650px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
-
-/* ---------- Навыки ---------- */
-.skills {
+/* About секция */
+.about {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+}
+
+/* Навыки */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .skill {
-  background: rgba(255,255,255,0.1);
-  padding: 8px 14px;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 10px 15px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
 }
 
-/* ---------- Пример кода как терминал ---------- */
-.code-card {
-  background: rgba(0,0,0,0.8);
-  text-align: left;
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
+/* Пример кода */
+.code pre {
+  background: #1e1e1e;
   color: #33ff33;
-  position: relative;
-}
-
-.code-card pre {
-  margin: 0;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 8px;
   overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
 }
 
-.code-card::before {
-  content: "Terminal";
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 14px;
-  color: #fff;
-  opacity: 0.7;
+/* Footer */
+.footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
 }
